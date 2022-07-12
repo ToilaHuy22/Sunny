@@ -1,0 +1,364 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: "Abhaya Libre", serif;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.btn {
+  padding: 18px 24px;
+  border: none;
+  border-radius: 8px;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding-top: 40px;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  z-index: 99;
+}
+.header__subnav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.header__menu-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.header__menu-item {
+  padding-left: 40px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  color: #292019;
+}
+.header__menu-item:first-child {
+  padding-left: 0;
+}
+.header__menu-link {
+  color: #292019;
+}
+.header__user-icon {
+  font-size: 16px;
+  color: #292019;
+  padding-left: 16px;
+}
+
+.logo__text {
+  position: relative;
+  color: #292019;
+  font-size: 30px;
+  font-weight: 600;
+}
+.logo__text-tm {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  color: #292019;
+  font-size: 10px;
+}
+
+.hero__container {
+  max-width: 1280px;
+  margin: 50px auto 70px;
+}
+.hero__list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.hero__info {
+  padding-top: 200px;
+  width: 33.3333%;
+}
+.hero__info-header {
+  font-size: 13px;
+  color: #292019;
+  background-color: #FFDAD7;
+  padding: 10px 70px 10px 19px;
+  border: 1px solid #FCC7C3;
+  border-radius: 50px;
+  position: relative;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.hero__info-header--icon {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -4px;
+}
+.hero__info-title {
+  margin: 20px 0;
+  font-size: 100px;
+  font-family: "Abhaya Libre";
+  font-weight: 800;
+  line-height: 86px;
+  letter-spacing: -0.03em;
+}
+.hero__info-desc {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 34px;
+  color: #292019;
+  opacity: 0.5;
+  margin-bottom: 36px;
+}
+.hero__info-buy {
+  display: flex;
+  align-items: flex-start;
+  justify-content: nowrap;
+  flex-wrap: nowrap;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+.hero__info-buy-cart {
+  background-color: #B91122;
+  color: #fff;
+  margin-right: 20px;
+  box-shadow: 0 20px 40px 10px rgba(185, 17, 34, 0.2);
+}
+.hero__img {
+  margin-left: -160px;
+}
+.hero__price {
+  margin-top: 282px;
+  margin-left: -208px;
+  padding: 50px 70px;
+  color: #292019;
+  background: #FFF8E7;
+  backdrop-filter: blur(164px);
+  border-radius: 20px;
+}
+.hero__price-detail {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  opacity: 0.5;
+}
+.hero__price-price {
+  margin: 10px 0 40px 0;
+  font-family: "Abhaya Libre";
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 40px;
+}
+.hero__price-info {
+  font-family: "Abhaya Libre";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+}
+.hero__price-icon {
+  font-size: 8px;
+  color: #E79331;
+  margin-bottom: 46px;
+}
+.hero__price-icon:last-child {
+  color: #292019;
+  padding-right: 60px;
+}
+.hero__price-options {
+  color: #292019;
+}
+.hero__price-options-icon--left {
+  padding: 16px 22px;
+  border: 1px solid currentColor;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  margin-right: -4px;
+}
+.hero__price-options-icon--right {
+  padding: 16px 22px;
+  border: 1px solid currentColor;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.product__container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.product__about-title {
+  font-family: "Abhaya Libre";
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 76px;
+  color: #292019;
+  text-align: center;
+  letter-spacing: -0.05em;
+}
+.product__about-desc {
+  margin: 0 64px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #72696A;
+  text-align: center;
+}
+.product__list {
+  margin: 62px 0 0 0;
+}
+.product__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 50px;
+}
+.product__item:nth-child(odd) .product__img {
+  margin-left: 70px;
+}
+.product__item:nth-child(odd) .product__info {
+  margin-left: 126px;
+  margin-right: 128px;
+}
+.product__item:nth-child(even) {
+  margin-bottom: 62px;
+  flex-direction: row-reverse;
+}
+.product__item:nth-child(even) .product__info {
+  margin-right: 20px;
+  margin-left: 74px;
+}
+.product__info {
+  margin-top: 160px;
+}
+.product__info-title {
+  font-family: "Abhaya Libre";
+  margin-bottom: 24px;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+}
+.product__info-desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #72696A;
+  margin-bottom: 10px;
+}
+.product__info-link {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #292019;
+}
+
+.whychoose__header {
+  padding-top: 76px;
+  margin: 0 15px 92px 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.whychoose__question-desc {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.05em;
+  color: #72696A;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.whychoose__question-title {
+  max-width: 445px;
+  font-family: "Abhaya Libre";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 46px;
+  line-height: 50px;
+}
+.whychoose__chart {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  padding-top: 34px;
+}
+.whychoose__chart-info {
+  margin-left: 32px;
+}
+.whychoose__chart-info-desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+  margin-bottom: 20px;
+  margin-top: 8px;
+}
+.whychoose__chart-info-number {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+}
+.whychoose__body {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+.whychoose__body-info {
+  padding-top: 54px;
+}
+.whychoose__body-info-title {
+  font-family: "Abhaya Libre";
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 30px;
+  color: #292019;
+  margin-bottom: 25px;
+}
+.whychoose__body-info-desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+  color: #292019;
+  margin-bottom: 18px;
+}
+.whychoose__img {
+  margin-left: 118px;
+  margin-right: 48px;
+}
+
+/*# sourceMappingURL=style.css.map */

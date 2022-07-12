@@ -1,0 +1,367 @@
+$color-text:#292019;
+$color-about-desc:#72696A;
+html {
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    font-family: 'Abhaya Libre', serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+@mixin flex($align:flex-start, $justify: flex-start, $wrap: nowrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
+
+.btn {
+    padding: 18px 24px;
+    border: none;
+    border-radius: 8px;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding-top: 40px;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    z-index: 99;
+    &__subnav {
+        @include flex(flex-start, space-between, nowrap);
+    }
+    &__menu {
+        &-list {
+            @include flex(flex-start, space-between, nowrap);
+        }
+        &-item {
+            padding-left: 40px;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 30px;
+            color: $color-text;
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+        &-link {
+            color: $color-text;
+        }
+    }
+    &__user {
+        &-icon {
+            font-size: 16px;
+            color: $color-text;
+            padding-left: 16px;
+        }
+    }
+}
+
+.logo {
+    &__text {
+        position: relative;
+        color: $color-text;
+        font-size: 30px;
+        font-weight: 600;
+        &-tm {
+            position: absolute;
+            top: 0;
+            right: -10px;
+            color: $color-text;
+            font-size: 10px;
+        }
+    }
+}
+
+.hero {
+    &__container {
+        max-width: 1280px;
+        margin: 50px auto 70px;
+    }
+    &__list {
+        @include flex(flex-start, space-between, nowrap);
+    }
+    &__info {
+        padding-top: 200px;
+        width: 33.3333%;
+        &-header {
+            font-size: 13px;
+            color: $color-text;
+            background-color: #FFDAD7;
+            padding: 10px 70px 10px 19px;
+            border: 1px solid #FCC7C3;
+            border-radius: 50px;
+            position: relative;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            &--icon {
+                position: absolute;
+                content: "";
+                right: 0;
+                top: -4px;
+            }
+        }
+        &-title {
+            margin: 20px 0;
+            font-size: 100px;
+            font-family: "Abhaya Libre";
+            font-weight: 800;
+            line-height: 86px;
+            letter-spacing: -0.03em;
+        }
+        &-desc {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 34px;
+            color: $color-text;
+            opacity: 0.5;
+            margin-bottom: 36px;
+        }
+        &-buy {
+            @include flex(flex-start, nowrap);
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            &-cart {
+                background-color: #B91122;
+                color: #fff;
+                margin-right: 20px;
+                box-shadow: 0 20px 40px 10px rgba($color: #B91122, $alpha: 0.2);
+            }
+        }
+    }
+    &__img {
+        margin-left: -160px;
+    }
+    &__price {
+        margin-top: 282px;
+        margin-left: -208px;
+        padding: 50px 70px;
+        color: $color-text;
+        background: #FFF8E7;
+        backdrop-filter: blur(164px);
+        border-radius: 20px;
+        &-detail {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            opacity: 0.5;
+        }
+        &-price {
+            margin: 10px 0 40px 0;
+            font-family: 'Abhaya Libre';
+            font-weight: 800;
+            font-size: 38px;
+            line-height: 40px;
+        }
+        &-info {
+            font-family: 'Abhaya Libre';
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        &-icon {
+            font-size: 8px;
+            color: #E79331;
+            margin-bottom: 46px;
+            &:last-child {
+                color: $color-text;
+                padding-right: 60px;
+            }
+        }
+        &-options {
+            color: $color-text;
+            &-icon {
+                &--left {
+                    padding: 16px 22px;
+                    border: 1px solid currentColor;
+                    border-top-left-radius: 25px;
+                    border-bottom-left-radius: 25px;
+                    margin-right: -4px;
+                }
+                &--right {
+                    padding: 16px 22px;
+                    border: 1px solid currentColor;
+                    border-top-right-radius: 25px;
+                    border-bottom-right-radius: 25px;
+                }
+            }
+        }
+    }
+}
+
+.product {
+    &__container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    &__about {
+        &-title {
+            font-family: 'Abhaya Libre';
+            font-weight: 800;
+            font-size: 60px;
+            line-height: 76px;
+            color: $color-text;
+            text-align: center;
+            letter-spacing: -0.05em;
+        }
+        &-desc {
+            margin: 0 64px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: $color-about-desc;
+            text-align: center;
+        }
+    }
+    &__list {
+        margin: 62px 0 0 0;
+    }
+    &__item {
+        @include flex(flex-start, space-between, nowrap);
+        margin-bottom: 50px;
+        &:nth-child(odd) {
+            .product__img {
+                margin-left: 70px;
+            }
+            .product__info {
+                margin-left: 126px;
+                margin-right: 128px;
+            }
+        }
+        &:nth-child(even) {
+            margin-bottom: 62px;
+            flex-direction: row-reverse;
+            .product__info {
+                margin-right: 20px;
+                margin-left: 74px;
+            }
+        }
+    }
+    &__info {
+        margin-top: 160px;
+        &-title {
+            font-family: 'Abhaya Libre';
+            margin-bottom: 24px;
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 60px;
+            letter-spacing: -0.02em;
+        }
+        &-desc {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: $color-about-desc;
+            margin-bottom: 10px;
+        }
+        &-link {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            color: $color-text;
+        }
+    }
+}
+
+.whychoose {
+    &__header {
+        padding-top: 76px;
+        margin: 0 15px 92px 100px;
+        @include flex(flex-start, space-between, nowrap);
+    }
+    &__question {
+        &-desc {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            letter-spacing: 0.05em;
+            color: $color-about-desc;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        &-title {
+            max-width: 445px;
+            font-family: 'Abhaya Libre';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 46px;
+            line-height: 50px;
+        }
+    }
+    &__chart {
+        @include flex();
+        padding-top: 34px;
+        &-info {
+            margin-left: 32px;
+            &-desc {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                letter-spacing: 0.01em;
+                margin-bottom: 20px;
+                margin-top: 8px;
+            }
+            &-number {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 20px;
+                letter-spacing: -0.01em;
+            }
+        }
+    }
+    &__body {
+        position: relative;
+        @include flex();
+        &-info {
+            padding-top: 54px;
+            &-title {
+                font-family: 'Abhaya Libre';
+                font-weight: 800;
+                font-size: 22px;
+                line-height: 30px;
+                color: $color-text;
+                margin-bottom: 25px;
+            }
+            &-desc {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 28px;
+                letter-spacing: 0.01em;
+                color: $color-text;
+                margin-bottom: 18px;
+            }
+        }
+    }
+    &__img {
+        margin-left: 118px;
+        margin-right: 48px;
+    }
+}
