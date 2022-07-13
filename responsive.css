@@ -1,0 +1,105 @@
+@media screen and (max-width: 1365px) {
+  .hero__price {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .wrapper {
+    width: 1024px;
+    margin: 0 auto;
+  }
+  .header {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .hero__price {
+    padding: 20px !important;
+  }
+  .hero__info-title {
+    font-size: 80px !important;
+    line-height: 72px !important;
+  }
+  .whychoose__header {
+    margin: 0 15px 92px 0px !important;
+  }
+  .whychoose__img {
+    margin: 0 !important;
+  }
+}
+@media screen and (max-width: 735px) {
+  .header__menu {
+    display: none;
+  }
+  .header__user {
+    display: none;
+  }
+  .logo__text {
+    font-size: 60px !important;
+  }
+  .hero__container {
+    max-width: 700px !important;
+  }
+  .hero__list {
+    display: block !important;
+  }
+  .hero__info {
+    width: 100% !important;
+    text-align: center !important;
+    padding-top: 50px !important;
+  }
+  .hero__info-header {
+    display: none;
+  }
+  .hero__info-title {
+    font-size: 120px !important;
+    line-height: 100px !important;
+  }
+  .hero__info-desc {
+    font-size: 40px !important;
+    line-height: 60px !important;
+    margin-bottom: 140px !important;
+  }
+  .hero__info-buy {
+    display: block !important;
+    font-size: 40px !important;
+    line-height: 60px !important;
+    text-align: center !important;
+  }
+  .hero__info-buy-play {
+    display: none;
+  }
+  .hero__img {
+    margin: 0 auto !important;
+  }
+  .hero__price {
+    display: none;
+  }
+  .product__about {
+    margin-top: 240px !important;
+  }
+  .product__about-title {
+    font-size: 80px !important;
+    line-height: 70px !important;
+  }
+  .product__about-desc {
+    font-size: 30px !important;
+    line-height: 45px !important;
+  }
+  .product__item {
+    display: block !important;
+  }
+  .product__img {
+    margin: 0 auto !important;
+  }
+  .product__info-title {
+    text-align: center !important;
+    font-size: 80px !important;
+    line-height: 70px !important;
+  }
+  .product__info-desc {
+    font-size: 30px !important;
+    line-height: 45px !important;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

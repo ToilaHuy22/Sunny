@@ -1,9 +1,6 @@
 $color-text:#292019;
 $color-about-desc:#72696A;
-html {
-    font-size: 62.5%;
-}
-
+$color-hover-link:#8A60FF;
 *,
 *:before,
 *:after {
@@ -28,6 +25,22 @@ img {
     flex-wrap: $wrap;
 }
 
+@mixin hover-link-smooth($duration: 0.2s, $type: linear) {
+    transition: $duration $type;
+    &:hover {
+        color: $color-hover-link;
+    }
+}
+
+@mixin scale1-1 {
+    transform: scale(1.1);
+}
+
+@mixin translateY($color: #8A60FF, $alpha:0.35) {
+    transform: translateY(-20px);
+    box-shadow: 0px 20px 30px rgba($color, $alpha: 0.35);
+}
+
 .btn {
     padding: 18px 24px;
     border: none;
@@ -40,11 +53,14 @@ img {
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 1210px;
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .header {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -73,11 +89,34 @@ img {
             }
         }
         &-link {
+            position: relative;
+            @include hover-link-smooth();
+            &:after {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 0%;
+                height: 3px;
+                border-radius: 3px;
+                background-color: rgb(237, 164, 240);
+                transition: width 0.2s ease-out;
+                z-index: 99;
+            }
+            &:hover {
+                width: 100%;
+                background-color: $color-hover-link;
+                transition: width ease-out 0.2s, background-color ease-in 0.3s;
+                transition-property: width, background-color;
+                transition-duration: 0.2s, 0.3s;
+                transition-timing-function: ease-out, ease-in;
+                transition-delay: 0s, 0s;
+            }
             color: $color-text;
         }
     }
     &__user {
         &-icon {
+            @include hover-link-smooth();
             font-size: 16px;
             color: $color-text;
             padding-left: 16px;
@@ -103,8 +142,8 @@ img {
 
 .hero {
     &__container {
-        max-width: 1280px;
-        margin: 50px auto 70px;
+        margin: 80px auto 70px;
+        padding-top: 60px;
     }
     &__list {
         @include flex(flex-start, space-between, nowrap);
@@ -391,14 +430,18 @@ img {
 }
 
 .customer {
+    &__container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
     margin-bottom: 12px;
     &__list {
         @include flex(start, space-between, nowrap);
-        padding: 0 106px 106px 70px;
+        padding-bottom: 70px;
     }
     &__info {
-        padding-top: 138px;
-        padding-left: 150px;
+        padding-top: 130px;
+        padding-left: 130px;
         &-desc {
             font-weight: 400;
             font-size: 18px;
@@ -438,13 +481,20 @@ img {
         padding-bottom: 14px;
         color: #4F6B7D;
     }
+    &__options {
+        &-change {
+            background-color: #8A60FF;
+            color: #8A60FF;
+        }
+    }
 }
 
 .question {
     &__container {
         padding-top: 85px;
-        max-width: 1148px;
+        max-width: 1170px;
         max-height: 672px;
+        margin: 0 auto;
     }
     &__title {
         font-family: 'Abhaya Libre';
@@ -504,6 +554,91 @@ img {
             letter-spacing: 0.1px;
             color: #363049;
             opacity: 0.7;
+        }
+    }
+}
+
+.footer {
+    &__wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+        background-color: #f8f8f8;
+    }
+    &__list {
+        @include flex(flex-start, space-between, nowrap);
+        padding: 58px 0 60px 0;
+        border-bottom: 1px solid #a5a4a1;
+    }
+    &__item {
+        max-width: 25%;
+        &-title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: $color-text;
+            margin-bottom: 18px;
+        }
+    }
+    &__link {
+        display: block;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 38px;
+        color: $color-about-desc;
+    }
+    &__desc {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        color: $color-about-desc;
+        margin-bottom: 50px;
+    }
+    &__logo {
+        margin-bottom: 30px;
+    }
+    &__contact {
+        margin-top: 50px;
+        &-icon {
+            font-size: 40px;
+            color: $color-text;
+            padding-right: 10px
+        }
+    }
+    &__subscribe {
+        @include flex(flex-start, space-between, nowrap);
+        padding: 22px;
+        background-color: $color-text;
+        &-email {
+            border: 0;
+            outline: none;
+            background-color: transparent;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #9c9c9c;
+            padding-right: 1.5rem;
+        }
+        &-button {
+            padding: 14px 22px;
+            background-color: #f8f8f8;
+        }
+    }
+}
+
+.copyright {
+    @include flex(flex-start, space-between);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 36px 0;
+    color: $color-about-desc;
+    &__by {
+        color: currentColor;
+    }
+    &__list {
+        @include flex(flex-start, space-between);
+        &__item {
+            margin-left: 36px;
         }
     }
 }

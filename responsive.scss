@@ -1,0 +1,134 @@
+@mixin size-desc-mobile {
+    font-size: 40px !important;
+    line-height: 60px !important;
+}
+
+@mixin size-desc-mobile-2 {
+    font-size: 30px !important;
+    line-height: 45px !important;
+}
+
+@mixin size-title-mobile {
+    font-size: 80px !important;
+    line-height: 70px !important;
+}
+
+//ipad pro
+@media screen and (max-width: 1365px) {
+    .hero {
+        &__price {
+            padding: 0;
+        }
+    }
+}
+
+//tablet
+@media screen and (max-width: 1023px) {
+    .wrapper {
+        width: 1024px;
+        margin: 0 auto;
+    }
+    .header {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .hero {
+        &__price {
+            padding: 20px !important;
+        }
+        &__info {
+            &-title {
+                font-size: 80px !important;
+                line-height: 72px !important;
+            }
+        }
+    }
+    .whychoose {
+        &__header {
+            margin: 0 15px 92px 0px !important;
+        }
+        &__img {
+            margin: 0 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .header {
+        &__menu {
+            display: none;
+        }
+        &__user {
+            display: none;
+        }
+    }
+    .logo {
+        &__text {
+            font-size: 60px !important;
+        }
+    }
+    .hero {
+        &__container {
+            max-width: calc(736px - 36px) !important;
+        }
+        &__list {
+            display: block !important;
+        }
+        &__info {
+            width: 100% !important;
+            text-align: center !important;
+            padding-top: 50px !important;
+            &-header {
+                display: none;
+            }
+            &-title {
+                font-size: 120px !important;
+                line-height: 100px !important;
+            }
+            &-desc {
+                @include size-desc-mobile();
+                margin-bottom: 140px !important;
+            }
+            &-buy {
+                display: block !important;
+                @include size-desc-mobile();
+                text-align: center !important;
+                &-play {
+                    display: none;
+                }
+            }
+        }
+        &__img {
+            margin: 0 auto !important;
+        }
+        &__price {
+            display: none;
+        }
+    }
+    .product {
+        &__about {
+            margin-top: 240px !important;
+            &-title {
+                @include size-title-mobile();
+            }
+            &-desc {
+                @include size-desc-mobile-2();
+            }
+        }
+        &__item {
+            display: block !important;
+        }
+        &__img {
+            margin: 0 auto !important;
+        }
+        &__info {
+            &-title {
+                text-align: center !important;
+                @include size-title-mobile();
+            }
+            &-desc {
+                @include size-desc-mobile-2();
+            }
+        }
+    }
+}
